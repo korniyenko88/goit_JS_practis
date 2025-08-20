@@ -355,21 +355,3 @@
 //     console.log("case 3");
 // }
 
-
-const deadLine = +prompt('enter day');
-if (deadLine === 0) {
-  alert('today');
-  
-}
-else if (deadLine === 1) {
-  alert('tomorrow');
-
-}
-else if (deadLine === 2) {
-  alert('owertomorrow')
-
-}
-
-else {
-  alert('not corect days')
-}
