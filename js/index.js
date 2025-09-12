@@ -355,3 +355,6 @@
 //     console.log("case 3");
 // }
 
+let firstName = prompt('Enter your name') || 'anonimous';
+
+console.log(firstName);
