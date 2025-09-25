@@ -23,7 +23,11 @@
 // }
 // console.log(getShippingCost("Australia"));
 
-const item = ['1', '2', '3', '4'] ;
-for (let i = 0; i < item.length; i++){
-    console.log(item[i]);
-}
+const pets = ["dog", "cat", "maus", "elefand", 'parrot'];
+const numbers = ['1', '2', '3', '4', '5'];
+
+const patsNumbers = pets.concat(numbers);
+
+console.log('pats and numbers', patsNumbers);
+console.log(pets);
+console.log(numbers);
