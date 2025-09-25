@@ -31,3 +31,13 @@ const patsNumbers = pets.concat(numbers);
 console.log('pats and numbers', patsNumbers);
 console.log(pets);
 console.log(numbers);
+
+
+for (let i = 0; i < pets.length; i++) {
+    console.log("pets: ", pets[i]);
+
+}
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
