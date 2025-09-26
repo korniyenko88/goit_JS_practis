@@ -23,21 +23,43 @@
 // }
 // console.log(getShippingCost("Australia"));
 
-const pets = ["dog", "cat", "maus", "elefand", 'parrot'];
-const numbers = ['1', '2', '3', '4', '5'];
+const pets = ["dog", "cat", "maus", "elefand", "parrot"];
+const numbers = ["1", "2", "3", "4", "5"];
 
 const patsNumbers = pets.concat(numbers);
 
-console.log('pats and numbers', patsNumbers);
+console.log("pats and numbers", patsNumbers);
 console.log(pets);
 console.log(numbers);
 
-
 for (let i = 0; i < pets.length; i++) {
-    console.log("pets: ", pets[i]);
-
+  console.log("pets: ", pets[i]);
 }
 
 for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
+  console.log(numbers[i]);
 }
+
+for (const pet of pets) {
+  console.log("pet list: ", pet);
+}
+
+async function printNumbersWithDelay(numbers) {
+  for (const number of numbers) {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log(number); //  Вивід числа з затримкою
+  }
+}
+
+async function printNumbersWithDelay() {
+  for (const number of numbers) {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log(number); //  Вивід числа з затримкою
+  }
+}
+
+printNumbersWithDelay()
+  
+  .catch((error) => {
+    console.error("Error during printing:", error);
+  });
