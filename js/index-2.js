@@ -44,13 +44,6 @@ for (const pet of pets) {
   console.log("pet list: ", pet);
 }
 
-async function printNumbersWithDelay(numbers) {
-  for (const number of numbers) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log(number); //  Вивід числа з затримкою
-  }
-}
-
 async function printNumbersWithDelay() {
   for (const number of numbers) {
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -58,8 +51,19 @@ async function printNumbersWithDelay() {
   }
 }
 
+async function printPetsWithDelay() {
+  for (const pet of pets) {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log(pet); //  Вивід числа з затримкою
+  }
+}
+
 printNumbersWithDelay()
   
   .catch((error) => {
+    console.error("Error during printing:", error);
+  });
+
+  printPetsWithDelay().catch((error) => {
     console.error("Error during printing:", error);
   });
