@@ -26,44 +26,59 @@
 const pets = ["dog", "cat", "maus", "elefand", "parrot"];
 const numbers = ["1", "2", "3", "4", "5"];
 
-const patsNumbers = pets.concat(numbers);
 
-console.log("pats and numbers", patsNumbers);
-console.log(pets);
-console.log(numbers);
+const value = '8 11';
+const arrValue = value.split(" ");
 
-for (let i = 0; i < pets.length; i++) {
-  console.log("pets: ", pets[i]);
-}
+console.log(typeof +arrValue[0])
 
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
-}
 
-for (const pet of pets) {
-  console.log("pet list: ", pet);
-}
 
-async function printNumbersWithDelay() {
-  for (const number of numbers) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log(number); //  Вивід числа з затримкою
-  }
-}
+// console.log(pets)
 
-async function printPetsWithDelay() {
-  for (const pet of pets) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log(pet); //  Вивід числа з затримкою
-  }
-}
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log (`${i}`)
+//  };
 
-printNumbersWithDelay()
+
+// const patsNumbers = pets.concat(numbers);
+
+// console.log("pats and numbers", patsNumbers);
+// console.log(pets);
+// console.log(numbers);
+
+// for (let i = 0; i < pets.length; i++) {
+//   console.log("pets: ", pets[i]);
+// }
+
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+
+// for (const pet of pets) {
+//   console.log("pet list: ", pet);
+// }
+
+// async function printNumbersWithDelay() {
+//   for (const number of numbers) {
+//     await new Promise((resolve) => setTimeout(resolve, 2000));
+//     console.log(number); //  Вивід числа з затримкою
+//   }
+// }
+
+// async function printPetsWithDelay() {
+//   for (const pet of pets) {
+//     await new Promise((resolve) => setTimeout(resolve, 2000));
+//     console.log(pet); //  Вивід числа з затримкою
+//   }
+// }
+
+// printNumbersWithDelay()
   
-  .catch((error) => {
-    console.error("Error during printing:", error);
-  });
+//   .catch((error) => {
+//     console.error("Error during printing:", error);
+//   });
 
-  printPetsWithDelay().catch((error) => {
-    console.error("Error during printing:", error);
-  });
+//   printPetsWithDelay().catch((error) => {
+//     console.error("Error during printing:", error);
+//   });
