@@ -119,39 +119,40 @@ function calculateAverage() {
 
 console.log(calculateAverage(1, 2, 3, 4));
 
-
 const getRectArea = function (dimensions) {
-    console.log(typeof dimensions);
-    const arrDimensions = dimensions.split(',');
-    console.log(arrDimensions)
+  console.log(typeof dimensions);
+  const arrDimensions = dimensions.split(",");
+  console.log(arrDimensions);
 
-  
-
-    
-    return +arrDimensions[0] * +arrDimensions[1];
-}
-console.log(getRectArea('8, 11'));
+  return +arrDimensions[0] * +arrDimensions[1];
+};
+console.log(getRectArea("8, 11"));
 
 const numberItem = function logItems(items) {
-    console.log(items);
-    let counter = 0;
-    for (let i = 0; i < items.length; i++){
-        counter++;
-        console.log(`${counter} : ${items[i]}`);
-    }
-}
+  console.log(items);
+  let counter = 0;
+  for (let i = 0; i < items.length; i++) {
+    counter++;
+    console.log(`${counter} : ${items[i]}`);
+  }
+};
 
 numberItem(["mango", "Poli", "Ajax"]);
 
-
 const leter = function (leter) {
-    console.log((leter));
-    // if (leter === leter.toUpperCase()) {
-    //     return 'to upper case'
-    // } else {
-    //     return 'lower case'
-    // }
-    return leter === leter.toUpperCase() ? "upper case " : "lower case";
-}
+  console.log(leter.split(""));
+  // if (leter === leter.toUpperCase()) {
+  //     return 'to upper case'
+  // } else {
+  //     return 'lower case'
+  // }
+  // return leter === leter.toUpperCase() ? "upper case " : "lower case";
 
-console.log(leter('a'))
+  const arrStr = leter.split("");
+  console.log(arrStr);
+  for (let i = 0; i < arrStr.length; i++) {
+    console.log(arrStr[i]);
+  }
+};
+
+console.log(leter("aBcDe"));
