@@ -95,31 +95,63 @@ const foo = function () {
 
 foo(10, "12", true, ["1", "2"]);
 
- function sumArg () {
-    console.log(arguments);
-    let total = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        total = total + arguments[i];
-    }
-    return total
+function sumArg() {
+  console.log(arguments);
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += total + arguments[i];
+  }
+  return total;
 }
 
 console.log(sumArg(1, 2, 3, 4));
 
-
 function calculateAverage() {
-    console.log(arguments);
+  console.log(arguments);
 
-    let average = 0;
+  let average = 0;
 
-    for (let i = 0; i < arguments.length; i++) {
-
-        average = average + arguments[i] / arguments.length;
-    }
-    return average;
-    
+  for (let i = 0; i < arguments.length; i++) {
+    average = average + arguments[i];
+  }
+  return average / arguments.length;
 }
 
+console.log(calculateAverage(1, 2, 3, 4));
 
 
-console.log(calculateAverage(5, 6, 7, 10));
+const getRectArea = function (dimensions) {
+    console.log(typeof dimensions);
+    const arrDimensions = dimensions.split(',');
+    console.log(arrDimensions)
+
+  
+
+    
+    return +arrDimensions[0] * +arrDimensions[1];
+}
+console.log(getRectArea('8, 11'));
+
+const numberItem = function logItems(items) {
+    console.log(items);
+    let counter = 0;
+    for (let i = 0; i < items.length; i++){
+        counter++;
+        console.log(`${counter} : ${items[i]}`);
+    }
+}
+
+numberItem(["mango", "Poli", "Ajax"]);
+
+
+const leter = function (leter) {
+    console.log((leter));
+    // if (leter === leter.toUpperCase()) {
+    //     return 'to upper case'
+    // } else {
+    //     return 'lower case'
+    // }
+    return leter === leter.toUpperCase() ? "upper case " : "lower case";
+}
+
+console.log(leter('a'))
