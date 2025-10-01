@@ -26,20 +26,16 @@
 // const pets = ["dog", "cat", "maus", "elefand", "parrot"];
 // const numbers = ["1", "2", "3", "4", "5"];
 
-
 // const value = '8 11';
 // const arrValue = value.split(" ");
 
 // console.log(typeof +arrValue[0])
-
-
 
 // console.log(pets)
 
 // for (let i = 0; i < numbers.length; i++) {
 //     console.log (`${i}`)
 //  };
-
 
 // const patsNumbers = pets.concat(numbers);
 
@@ -74,7 +70,7 @@
 // }
 
 // printNumbersWithDelay()
-  
+
 //   .catch((error) => {
 //     console.error("Error during printing:", error);
 //   });
@@ -84,33 +80,46 @@
 //   });
 
 const foo = function () {
-    console.log(arguments)
-    console.log(arguments[3])
-    const arrArguments = arguments[3];
-    console.log(arrArguments)
-    arrArguments.push('2');
-    console.log(arrArguments);
+  console.log(arguments);
+  console.log(arguments[3]);
+  const arrArguments = arguments[3];
+  console.log(arrArguments);
+  arrArguments.push("2");
+  console.log(arrArguments);
+  console.log(arguments);
+  const makeArray = Array.from(arguments);
+  console.log(makeArray);
+  makeArray.push("pets");
+  console.log(makeArray);
+};
+
+foo(10, "12", true, ["1", "2"]);
+
+ function sumArg () {
     console.log(arguments);
-    const makeArray = Array.from(arguments)
-    console.log(makeArray)
-    makeArray.push('pets')
-     console.log(makeArray);
-}
-
-foo(10, '12', true, ['1', '2'])
-
-
-const sumArg = function () {
-    console.log(arguments)
     let total = 0;
     for (let i = 0; i < arguments.length; i++) {
-       
         total = total + arguments[i];
-       
     }
     return total
 }
 
+console.log(sumArg(1, 2, 3, 4));
 
 
-console.log(sumArg(1,2,3,4))
+function calculateAverage() {
+    console.log(arguments);
+
+    let average = 0;
+
+    for (let i = 0; i < arguments.length; i++) {
+
+        average = average + arguments[i] / arguments.length;
+    }
+    return average;
+    
+}
+
+
+
+console.log(calculateAverage(5, 6, 7, 10));
