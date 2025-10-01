@@ -23,14 +23,14 @@
 // }
 // console.log(getShippingCost("Australia"));
 
-const pets = ["dog", "cat", "maus", "elefand", "parrot"];
-const numbers = ["1", "2", "3", "4", "5"];
+// const pets = ["dog", "cat", "maus", "elefand", "parrot"];
+// const numbers = ["1", "2", "3", "4", "5"];
 
 
-const value = '8 11';
-const arrValue = value.split(" ");
+// const value = '8 11';
+// const arrValue = value.split(" ");
 
-console.log(typeof +arrValue[0])
+// console.log(typeof +arrValue[0])
 
 
 
@@ -82,3 +82,35 @@ console.log(typeof +arrValue[0])
 //   printPetsWithDelay().catch((error) => {
 //     console.error("Error during printing:", error);
 //   });
+
+const foo = function () {
+    console.log(arguments)
+    console.log(arguments[3])
+    const arrArguments = arguments[3];
+    console.log(arrArguments)
+    arrArguments.push('2');
+    console.log(arrArguments);
+    console.log(arguments);
+    const makeArray = Array.from(arguments)
+    console.log(makeArray)
+    makeArray.push('pets')
+     console.log(makeArray);
+}
+
+foo(10, '12', true, ['1', '2'])
+
+
+const sumArg = function () {
+    console.log(arguments)
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+       
+        total = total + arguments[i];
+       
+    }
+    return total
+}
+
+
+
+console.log(sumArg(1,2,3,4))
