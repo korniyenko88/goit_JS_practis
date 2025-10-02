@@ -140,19 +140,29 @@ const numberItem = function logItems(items) {
 numberItem(["mango", "Poli", "Ajax"]);
 
 const leter = function (leter) {
-  console.log(leter.split(""));
-  // if (leter === leter.toUpperCase()) {
-  //     return 'to upper case'
-  // } else {
-  //     return 'lower case'
-  // }
-  // return leter === leter.toUpperCase() ? "upper case " : "lower case";
+    console.log(leter.split(""));
+    // if (leter === leter.toUpperCase()) {
+    //     return 'to upper case'
+    // } else {
+    //     return 'lower case'
+    // }
+    // return leter === leter.toUpperCase() ? "upper case " : "lower case";
 
-  const arrStr = leter.split("");
-  console.log(arrStr);
-  for (let i = 0; i < arrStr.length; i++) {
-    console.log(arrStr[i]);
-  }
-};
+    const arrStr = leter.split("");
+    console.log(arrStr);
+    let newStr = '';
+    
+    for (const chengeStr of arrStr) {
+        if (chengeStr === chengeStr.toLowerCase()) {
+          newStr = newStr + chengeStr.toUpperCase();
+        } else {
+          if (chengeStr === chengeStr.toUpperCase()) {
+            newStr = newStr + chengeStr.toLowerCase();
+          }
+        }
+        
 
-console.log(leter("aBcDe"));
+    }
+    return newStr;
+}
+console.log(leter("BaDCg"));
