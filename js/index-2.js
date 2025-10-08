@@ -166,32 +166,32 @@
 // }
 // console.log(leter("BaDCg"));
 
-const slugify = function (title) {
-  const slug = title.toUpperCase().split(" ").join("-");
+// const slugify = function (title) {
+//   const slug = title.toUpperCase().split(" ").join("-");
 
-  return slug;
-};
-console.log(slugify("Arrays for beginners"));
+//   return slug;
+// };
+// console.log(slugify("Arrays for beginners"));
 
 
 
-function makeArray(firstArray, secondArray, maxLength) {
-    console.log(firstArray);
-    console.log(secondArray);
+// function makeArray(firstArray, secondArray, maxLength) {
+//     console.log(firstArray);
+//     console.log(secondArray);
 
-    const newArray = firstArray.concat(secondArray);
-    if (newArray.length <= maxLength) {
-        return newArray;
-    } else {
-        return newArray.slice(0 , maxLength)
+//     const newArray = firstArray.concat(secondArray);
+//     if (newArray.length <= maxLength) {
+//         return newArray;
+//     } else {
+//         return newArray.slice(0 , maxLength)
 
-    }
-}
+//     }
+// }
 
-console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 5));
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 5));
 // ["Mango", "Poly", "Houston", "Ajax"]
 
-function filterArray(numbers, value) {
+// function filterArray(numbers, value) {
 //     const newArrey = [];
 //     for (const number of numbers) {
 //         if (number > value) {
@@ -200,8 +200,8 @@ function filterArray(numbers, value) {
             
 //     }
 // return newArrey
-    const filteredArray = numbers.filter(number => number > value)
-    return filteredArray
-}
+//     const filteredArray = numbers.filter(number => number > value)
+//     return filteredArray
+// }
 
-console.log(filterArray([12, 24, 8, 41, 76], 20));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
