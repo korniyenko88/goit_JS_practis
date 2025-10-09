@@ -1,17 +1,64 @@
-const numbers = {
-    first: '1',
-    second: '2',
-    therd: '3'
+// const numbers = {
+//     first: '1',
+//     second: '2',
+//     therd: '3'
+// };
+
+// console.log('object: ', numbers);
+
+// let total = 0;
+
+// for (const key in numbers) {
+//     // console.log(`${key} : ${numbers[key]}`)
+
+//     total += +numbers[key];
+
+// }
+// console.log(total);
+
+// const keys = Object.keys(numbers)
+// console.log(keys)
+
+// let totalValue = 0;
+// for (const key of keys) {
+//     console.log(key)
+//     totalValue += +numbers[key];
+//     console.log(totalValue)
+// }
+// console.log(totalValue)
+
+const user = {
+  name: "Mango",
+  age: 20,
+  hobby: "html",
+  premium: true,
 };
 
-console.log('object: ', numbers);
+console.log("User: ", user);
 
-let total = 0;
+user.mood = "hapy";
+user.hobby = "skydiving";
+user.premium = false;
 
-for (const key in numbers) {
-    // console.log(`${key} : ${numbers[key]}`)
+console.log(user);
 
-    total += +numbers[key];
-   
+const userKeys = Object.keys(user);
+console.log(userKeys);
+
+for (const key of userKeys) {
+  console.log(`${key}: ${user[key]}`);
 }
- console.log(total);
+
+const obj = {
+  x: 2,
+  y: 3,
+  z: 4,
+};
+
+const keys = Object.keys(obj);
+console.log(keys);
+for (const key of keys) {
+  obj[key] = obj[key] ** 2;
+}
+
+console.log(obj);
