@@ -173,8 +173,6 @@
 // };
 // console.log(slugify("Arrays for beginners"));
 
-
-
 // function makeArray(firstArray, secondArray, maxLength) {
 //     console.log(firstArray);
 //     console.log(secondArray);
@@ -197,7 +195,7 @@
 //         if (number > value) {
 // newArrey.push(number)
 //         }
-            
+
 //     }
 // return newArrey
 //     const filteredArray = numbers.filter(number => number > value)
@@ -205,3 +203,31 @@
 // }
 
 // console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+console.log(courses);
+
+function addCourse(course) {
+  if (courses.includes(course)) {
+    return console.log(`${course} all ready added to your curses!`);
+  }
+  courses.push(course);
+};
+
+function removeCourse(course) {
+  //  courses.filter(item => item !== course);
+  const index = courses.indexOf(course);
+  console.log(index);
+  if (index !== -1) {
+      courses.splice(index, 1);
+      console.log(`${course} removed`)
+  } else {
+    return console.log(`${course} all reddy removed!`);
+  }
+};
+
+addCourse("qwerty");
+addCourse("qwerty");
+removeCourse('qwerty')
+
+console.log(courses);
