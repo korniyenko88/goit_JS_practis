@@ -1,83 +1,102 @@
-// const numbers = {
-//     first: '1',
-//     second: '2',
-//     therd: '3'
+// // const numbers = {
+// //     first: '1',
+// //     second: '2',
+// //     therd: '3'
+// // };
+
+// // console.log('object: ', numbers);
+
+// // let total = 0;
+
+// // for (const key in numbers) {
+// //     // console.log(`${key} : ${numbers[key]}`)
+
+// //     total += +numbers[key];
+
+// // }
+// // console.log(total);
+
+// // const keys = Object.keys(numbers)
+// // console.log(keys)
+
+// // let totalValue = 0;
+// // for (const key of keys) {
+// //     console.log(key)
+// //     totalValue += +numbers[key];
+// //     console.log(totalValue)
+// // }
+// // console.log(totalValue)
+
+// // const user = {
+// //   name: "Mango",
+// //   age: 20,
+// //   hobby: "html",
+// //   premium: true,
+// // };
+
+// // console.log("User: ", user);
+
+// // user.mood = "hapy";
+// // user.hobby = "skydiving";
+// // user.premium = false;
+
+// // console.log(user);
+
+// // const userKeys = Object.keys(user);
+// // console.log(userKeys);
+
+// // for (const key of userKeys) {
+// //   console.log(`${key}: ${user[key]}`);
+// // }
+
+// // const obj = {
+// //   x: 2,
+// //   y: 3,
+// //   z: 4,
+// // };
+
+// // const keys = Object.keys(obj);
+// // console.log(keys);
+// // for (const key of keys) {
+// //   obj[key] = obj[key] ** 2;
+// // }
+
+// // console.log(obj);
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
 // };
 
-// console.log('object: ', numbers);
+// let sum = 0;
 
-// let total = 0;
+// const values = Object.values(salaries);
+// console.log(values);
 
-// for (const key in numbers) {
-//     // console.log(`${key} : ${numbers[key]}`)
-
-//     total += +numbers[key];
+// for (const value of values) {
+//     sum += +value;
 
 // }
-// console.log(total);
+// console.log('Total Salaries:', sum);
 
-// const keys = Object.keys(numbers)
-// console.log(keys)
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kivi", online: true },
+  { name: "Poly", online: true },
+  { name: "Ajax", online: false },
+];
 
-// let totalValue = 0;
-// for (const key of keys) {
-//     console.log(key)
-//     totalValue += +numbers[key];
-//     console.log(totalValue)
-// }
-// console.log(totalValue)
+console.log("Obj:", friends);
 
-// const user = {
-//   name: "Mango",
-//   age: 20,
-//   hobby: "html",
-//   premium: true,
-// };
+function findFriendByName(allFriends, friendName) {
 
-// console.log("User: ", user);
+    for (const friend of allFriends) {
+        if (friend.name === friendName) {
+          return friend
+      }else { return `${friendName} not find!`}
+  }
 
-// user.mood = "hapy";
-// user.hobby = "skydiving";
-// user.premium = false;
-
-// console.log(user);
-
-// const userKeys = Object.keys(user);
-// console.log(userKeys);
-
-// for (const key of userKeys) {
-//   console.log(`${key}: ${user[key]}`);
-// }
-
-// const obj = {
-//   x: 2,
-//   y: 3,
-//   z: 4,
-// };
-
-// const keys = Object.keys(obj);
-// console.log(keys);
-// for (const key of keys) {
-//   obj[key] = obj[key] ** 2;
-// }
-
-// console.log(obj);
-
-const salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-};
-
-let sum = 0;
-
-const values = Object.values(salaries);
-console.log(values);
-
-for (const value of values) {
-    sum += +value;
-    
 }
-console.log('Total Salaries:', sum);
 
-
+console.log(findFriendByName(friends, 'Chery'));
