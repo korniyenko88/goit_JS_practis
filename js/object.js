@@ -90,13 +90,36 @@ const friends = [
 console.log("Obj:", friends);
 
 function findFriendByName(allFriends, friendName) {
-
-    for (const friend of allFriends) {
-        if (friend.name === friendName) {
-          return friend
-      }else { return `${friendName} not find!`}
+  for (const friend of allFriends) {
+    if (friend.name.toLowerCase() === friendName.toLowerCase()) {
+      return friend;
+    }
   }
-
+  return ` ${friendName.toUpperCase()} not found!`;
 }
 
-console.log(findFriendByName(friends, 'Chery'));
+console.log(findFriendByName(friends, "kivi"));
+
+function getAllNames (allFriends) {
+    let frindsNames = [];
+    for (const names of allFriends) {
+        frindsNames.push(names.name);
+
+    }
+    return frindsNames;
+  
+}
+
+console.log(getAllNames(friends));
+
+function getOnlineFriends(allFriends) {
+    let friendOnline = [];
+    for (const friend of allFriends) {
+        if (friend.online === true) {
+            friendOnline.push(friend.name);
+        }
+    }
+    return friendOnline;
+}
+
+console.log(getOnlineFriends(friends))
