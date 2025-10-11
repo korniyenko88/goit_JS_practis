@@ -80,46 +80,66 @@
 // }
 // console.log('Total Salaries:', sum);
 
-const friends = [
-  { name: "Mango", online: false },
-  { name: "Kivi", online: true },
-  { name: "Poly", online: true },
-  { name: "Ajax", online: false },
+// const friends = [
+//   { name: "Mango", online: false },
+//   { name: "Kivi", online: true },
+//   { name: "Poly", online: true },
+//   { name: "Ajax", online: false },
+// ];
+
+// console.log("Obj:", friends);
+
+// function findFriendByName(allFriends, friendName) {
+//   for (const friend of allFriends) {
+//     if (friend.name.toLowerCase() === friendName.toLowerCase()) {
+//       return friend;
+//     }
+//   }
+//   return ` ${friendName.toUpperCase()} not found!`;
+// }
+
+// console.log(findFriendByName(friends, "kivi"));
+
+// function getAllNames (allFriends) {
+//     let frindsNames = [];
+//     for (const names of allFriends) {
+//         frindsNames.push(names.name);
+
+//     }
+//     return frindsNames;
+
+// }
+
+// console.log(getAllNames(friends));
+
+// function getOnlineFriends(allFriends) {
+//     let friendOnline = [];
+//     for (const friend of allFriends) {
+//         if (friend.online === true) {
+//             friendOnline.push(friend.name);
+//         }
+//     }
+//     return friendOnline;
+// }
+
+// console.log(getOnlineFriends(friends))
+
+const stones = [
+  { name: "Смарагд", price: 1300, quantity: 4 },
+  { name: "Діамант", price: 2700, quantity: 3 },
+  { name: "Сапфір", price: 400, quantity: 7 },
+  { name: "Аконіт", price: 200, quantity: 2 },
 ];
 
-console.log("Obj:", friends);
 
-function findFriendByName(allFriends, friendName) {
-  for (const friend of allFriends) {
-    if (friend.name.toLowerCase() === friendName.toLowerCase()) {
-      return friend;
-    }
-  }
-  return ` ${friendName.toUpperCase()} not found!`;
-}
-
-console.log(findFriendByName(friends, "kivi"));
-
-function getAllNames (allFriends) {
-    let frindsNames = [];
-    for (const names of allFriends) {
-        frindsNames.push(names.name);
-
-    }
-    return frindsNames;
-  
-}
-
-console.log(getAllNames(friends));
-
-function getOnlineFriends(allFriends) {
-    let friendOnline = [];
-    for (const friend of allFriends) {
-        if (friend.online === true) {
-            friendOnline.push(friend.name);
+function calcTotalPrice(allStones, stonesName) {
+    let totalPrice = 0;
+    for (const stone of allStones) {
+        if (stone.name.toLowerCase() === stonesName.toLowerCase()) {
+            totalPrice = stone.price * stone.quantity;
         }
     }
-    return friendOnline;
+    return `${totalPrice} ${stonesName}`
 }
 
-console.log(getOnlineFriends(friends))
+console.log(calcTotalPrice(stones, 'Діамант'))
