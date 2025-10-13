@@ -150,7 +150,7 @@ const playList = {
   changeName(newName) {
     this.name = newName;
   },
-  updateRating (newRating) {
+  updateRating(newRating) {
     this.rating = newRating;
   },
 };
@@ -161,4 +161,17 @@ playList.changeName("some trak");
 playList.updateRating(2);
 console.log(playList);
 
+const temps = [18, 14, 12, 21, 17, 29, 24];
 
+const tempsCopy = [...temps]
+
+console.log(temps)
+console.log('copy:', tempsCopy)
+
+temps.push(20)
+console.log(temps);
+console.log("copy:", tempsCopy);
+
+const minTemp = Math.min(...temps) 
+
+console.log(minTemp);
