@@ -131,15 +131,34 @@ const stones = [
   { name: "Аконіт", price: 200, quantity: 2 },
 ];
 
-
 function calcTotalPrice(allStones, stonesName) {
-    let totalPrice = 0;
-    for (const stone of allStones) {
-        if (stone.name.toLowerCase() === stonesName.toLowerCase()) {
-            totalPrice = stone.price * stone.quantity;
-        }
+  let totalPrice = 0;
+  for (const stone of allStones) {
+    if (stone.name.toLowerCase() === stonesName.toLowerCase()) {
+      totalPrice = stone.price * stone.quantity;
     }
-    return `${totalPrice} ${stonesName}`
+  }
+  return `${totalPrice} ${stonesName}`;
 }
 
-console.log(calcTotalPrice(stones, 'Діамант'))
+console.log(calcTotalPrice(stones, "Діамант"));
+
+const playList = {
+  name: "qwerty",
+  rating: 6,
+  traks: ["trak-1", "trak-2", "trak-3"],
+  changeName(newName) {
+    this.name = newName;
+  },
+  updateRating (newRating) {
+    this.rating = newRating;
+  },
+};
+
+console.log(playList);
+
+playList.changeName("some trak");
+playList.updateRating(2);
+console.log(playList);
+
+
