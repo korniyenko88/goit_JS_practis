@@ -176,15 +176,120 @@
 
 // console.log(minTemp);
 
-function isEnoughCapacity(products, containerSize) {
-    const arrProducts = Object.values(products);
-    let totalProducts = 0;
-  for (const item of arrProducts) {
-      totalProducts += +item;
-    }
-    console.log(totalProducts)
-    return totalProducts <= containerSize
-    
+// function isEnoughCapacity(products, containerSize) {
+//     let sumProducts = 0;
+//     for (key in products) {
+//         console.log(key)
+//         console.log(products[key])
+//         sumProducts += +products[key];;
+//     }
+//     console.log(sumProducts)
+
+//     return sumProducts <= containerSize;
+// //     const arrProducts = Object.values(products);
+// //     let totalProducts = 0;
+// //   for (const item of arrProducts) {
+// //       totalProducts += +item;
+// //     }
+// //     console.log(totalProducts)
+// //     return totalProducts <= containerSize
+
+// }
+
+// console.log(isEnoughCapacity({ apples: 5, grapes: 1, carrots: 1 }, 10)); // true
+
+function calcAverageCalories(days) {
+  console.log(days);
+
+  let totalCalories = 0;
+  for (const item of days) {
+    totalCalories += +item.calories;
+  }
+  console.log(totalCalories);
+
+  const averegeCalories = totalCalories / days.length;
+  return averegeCalories;
 }
 
-console.log(isEnoughCapacity({ apples: 5, grapes: 1, carrots: 1 }, 2)); // true
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 },
+  ])
+); // 3180
+
+const profile = {
+  username: "Jacob",
+  playTime: 300,
+  changeUsername(newName) {
+    this.username = newName;
+  },
+  updatePlayTime(hours) {
+    this.playTime = hours;
+  },
+  getInfo() {
+    return `${profile.username} has ${profile.playTime} active hours!`;
+  },
+};
+
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(320);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
+getUserNames = (users) => {
+  const newArray = [];
+    for (const user of users) {
+        console.log(user.name)
+        newArray.push(user.name)
+    }
+    return newArray
+};
+
+console.log(
+  getUserNames([
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      balance: 2811,
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      balance: 3821,
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      balance: 3793,
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      balance: 2278,
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      balance: 3951,
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      balance: 1498,
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      balance: 2764,
+    },
+  ])
+); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
