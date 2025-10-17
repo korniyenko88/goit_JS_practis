@@ -246,11 +246,13 @@ profile.updatePlayTime(320);
 console.log(profile.getInfo()); // "Marco has 320 active hours!"
 
 getUserNames = (users) => {
-  const newArray = [];
-    for (const user of users) {
-        console.log(user.name)
-        newArray.push(user.name)
-    }
+    let newArray = [];
+    
+    newArray = users.map((user) => user.name );
+    // for (const user of users) {
+    //     console.log(user.name)
+    //     newArray.push(user.name)
+    // }
     return newArray
 };
 
