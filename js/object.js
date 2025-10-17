@@ -172,6 +172,19 @@
 // console.log(temps);
 // console.log("copy:", tempsCopy);
 
-// const minTemp = Math.min(...temps) 
+// const minTemp = Math.min(...temps)
 
 // console.log(minTemp);
+
+function isEnoughCapacity(products, containerSize) {
+    const arrProducts = Object.values(products);
+    let totalProducts = 0;
+  for (const item of arrProducts) {
+      totalProducts += +item;
+    }
+    console.log(totalProducts)
+    return totalProducts <= containerSize
+    
+}
+
+console.log(isEnoughCapacity({ apples: 5, grapes: 1, carrots: 1 }, 2)); // true
